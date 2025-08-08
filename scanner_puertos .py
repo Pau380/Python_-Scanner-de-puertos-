@@ -3,12 +3,12 @@
 #socket nos sirve para crear conecciones
 import socket
 
-#se requiere poner la dirección ip que se desea escanear mi ip= 192.168.80.17
+#se requiere poner la dirección ip que se desea escanear 
 
 ip= input("Ingrese la dirección IP a escanear: ")
 
 #Hay que hacer un bucle for para escaear los puertos
-#Hay 65.965 puertos
+#Hay 65535 puertos
 #socket.SOCK_STREAM: significa que estamos utilizando el protocolo TCP
 
 for puerto in range (1,65535):
@@ -24,4 +24,5 @@ for puerto in range (1,65535):
         sock.close() #cerramos el socket
     else:
         print("Puerto cerrado: " + str(puerto))
+
 
